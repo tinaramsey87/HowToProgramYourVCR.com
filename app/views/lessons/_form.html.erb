@@ -1,9 +1,13 @@
-<%= form_for @lesson do |f| %>
-<%= f.label :section %>
-<% @lessons.all.each do |lesson| %>
-  <select name="lesson[section_id]" id="lesson_section_id">
-    <option value="<%= lesson.title %>"><%= lesson.title %></option>
-  </select>
-<% end %>
-<%= f.submit %>
+<%= form_for [@section, @lesson] do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+
+  <%= f.label :body %>
+  <%= f.text_field :body %>
+
+  <%= f.label :number %>
+  <%= f.number_field :number %>
+
+  <%= f.submit %>
+
 <% end %>

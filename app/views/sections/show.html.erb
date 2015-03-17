@@ -1,8 +1,12 @@
-<h1>Lessons for <%= @section.title %></h1>
+<h3><%= @section.title %></h3>
 
-<% @section.lessons.each do |lesson| %>
-  <h4><%= lesson.title %></h4>
-  <p><%= lesson.body %></p>
-<% end %>
+<div class="col-md-12">
+  <% @section.lessons.each do |lesson| %>
 
-<%= render "lessons/form" %>
+    <h4><%= lesson.title %></h4>
+    <p><%= lesson.body %></p>
+  <% end %>
+
+  <%= link_to 'Add Lesson', new_section_lesson_path(@section) %>
+
+</div>
