@@ -3,6 +3,11 @@ class LessonsController < ApplicationController
 
   end
 
+  def show
+    @lesson = Lesson.find(params[:id])
+    @section = Section.find(params[:section_id])
+  end
+
   def new
     @section = Section.all.find(params[:section_id])
     @lesson = @section.lessons.new

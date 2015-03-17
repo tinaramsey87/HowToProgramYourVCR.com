@@ -2,9 +2,9 @@
 
 <div class="col-md-12">
   <% @section.lessons.each do |lesson| %>
-
-    <h4><%= lesson.title %></h4>
-    <p><%= lesson.body %></p>
+  <div class="row">
+    <h4><%= link_to lesson.title, section_lesson_path(@section, lesson) %><%= lesson.number %></h4>
+  </div>
   <% end %>
 
   <%= link_to 'Add Lesson', new_section_lesson_path(@section) %>

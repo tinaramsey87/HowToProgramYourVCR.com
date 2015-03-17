@@ -5,6 +5,7 @@ class SectionsController < ApplicationController
 
   def show
     @section = Section.find(params[:id])
+    Lesson.order(number: :desc)
   end
 
   def update

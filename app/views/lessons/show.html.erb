@@ -2,6 +2,4 @@
 
 <p><%= @lesson.body %></p>
 
-<%= link_to 'previous', lesson_path(@lesson.previous) %> |
-<%= link_to 'next', lesson_path(@lesson.next) %> |
-<%= link_to 'Table of Contents', lessons_path %>
+<%= link_to 'Return to ' + @section.title, section_path(@section) %>
