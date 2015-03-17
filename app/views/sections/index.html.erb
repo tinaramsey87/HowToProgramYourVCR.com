@@ -1,0 +1,10 @@
+<h1>Table of Contents</h1>
+
+<h2>Sections</h2>
+<ul>
+<% @sections.each do |section| %>
+  <li><%= link_to section.title, section_path(section) %></li>
+<% end %>
+</ul>
+
+<%= image_tag 'capybara.jpeg' %>
